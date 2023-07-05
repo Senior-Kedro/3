@@ -59,11 +59,15 @@ int main() {
     printf("Enter the number of digits (r): ");
     scanf("%d", &r);
 
-    // Call the function to count the number of valid numbers with r digits
-    int count = countNumbers(r);
+    if (r>=1){
+        // Call the function to count the number of valid numbers with r digits
+        int count = countNumbers(r);
 
-    // Print the result
-    printf("The number of valid numbers with %d digits is: %d\n", r, count);
-
+        // Print the result
+        printf("The number of valid numbers with %d digits is: %d\n", r, count);
+    } else{
+        printf("You entered a wrong number of digits, it can't be less than 1");
+    }
+    
     return 0;
 }
